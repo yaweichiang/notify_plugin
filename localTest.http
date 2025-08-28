@@ -1,0 +1,14 @@
+### GET request to example server
+GET http://localhost:8080/api/notify/test
+
+### GET request to example server
+POST http://localhost:8080/api/notify/email
+Content-Type: application/json
+
+{
+  "to": "yawei19901212@gmail.com",
+  "subject": "標題",
+  "content": "信件內容"
+}
+
+###
