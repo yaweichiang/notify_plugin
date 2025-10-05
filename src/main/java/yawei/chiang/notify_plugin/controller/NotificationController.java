@@ -2,7 +2,6 @@ package yawei.chiang.notify_plugin.controller;
 
 import jakarta.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,13 +36,6 @@ public class NotificationController {
   @PostMapping("/line/broadcast")
   public void sendBroadcast(@RequestBody LineRequest request) {
     lineService.broadcastMessage(request.getMessage());
-  }
-
-  @GetMapping("/test")
-  public void test() {
-    System.out.println("test");
-    lineServiceImpl.sendMessage2Developer("test");
-//    emailService.sendMail(request.getTo(), request.getSubject(), request.getContent());
   }
 }
 
